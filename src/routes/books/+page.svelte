@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Book from './BookListItem.svelte';
+	import Search from './Search.svelte';
 
 	let { data } = $props();
 	
@@ -7,7 +8,10 @@
 </script>
 
 <div>
-	{#each data.books as book}
+	<Search />
+	<div>
+		{#each data.books as book}
 		<Book { book }/>
-	{/each}
+		{/each}
+	</div>
 </div>

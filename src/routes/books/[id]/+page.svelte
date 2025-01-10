@@ -1,5 +1,7 @@
 <script lang="ts">
-	
+	import BookDetails from './BookDetails.svelte';
+
+	let { data } = $props();
 </script>
 
-<div>This should be the details page of book</div>
+<p>{data.book?.title}</p>
