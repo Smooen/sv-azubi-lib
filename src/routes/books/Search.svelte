@@ -1,12 +1,13 @@
 <script lang="ts">
-	let searchString = $state('');
-
-	let { search } = $props();
+	let { searchString, search } = $props();
 </script>
 
 <div>
-	<input type="text" bind:value={searchString}>
-	<button type="submit" aria-label="Search" onsubmit={search}>Search</button>
-
+	<input 
+		type="text" 
+		placeholder="Search..."
+		bind:value={searchString} 
+		oninput={() => search(searchString)}
+	>
 	<p>{searchString}</p>
 </div>
