@@ -1,5 +1,6 @@
 <script>
-	import '@picocss/pico'
+	import '@picocss/pico';
+	import Footer from './Footer.svelte';
 	let { children } = $props();
 </script>
 
@@ -7,8 +8,4 @@
 
 {@render children()}
 
-<nav>
-	<a href="/">Home</a>
-	<a href="/books">Books</a>
-	<a href="/favorites">Favorites</a>
-</nav>
+<Footer />
