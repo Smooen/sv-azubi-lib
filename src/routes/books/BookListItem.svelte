@@ -4,11 +4,31 @@
 	let { book } = $props();
 </script>
 
-<div>
+<div class="container">
 	<a href="/books/{book.isbn}">
-		<img src="{ book.imageLink ? book.imageLink : cover_placeholder }" alt="Cover image of the book {book.title}" style="width: 18%">
+		<img src="{ book.imageLink ? book.imageLink : cover_placeholder }" alt="Cover image of the book {book.title}">
 	</a>
-	<p>Title: {book.title}</p>
-	<p>Author: {book.author}</p>
-	<p>Release Date: {book.releaseDate}</p>
+	<div class="content">
+		<p>Title: {book.title}</p>
+		<p>Author: {book.author}</p>
+		<p>Release Date: {book.releaseDate}</p>
+	</div>
 </div>
+
+<style>
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		margin-bottom: 1rem;
+		align-items: center;
+	}
+
+	.content {
+		display: flex;
+		flex-flow: column wrap;
+	}
+	
+	img {
+		padding-right: 1rem;
+	}
+</style>

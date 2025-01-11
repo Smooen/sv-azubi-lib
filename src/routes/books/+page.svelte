@@ -4,14 +4,18 @@
 
 	let { data } = $props();
 	
+function search(books: any) {
+	console.log("Searching");
+}
+
 	$inspect(data);
 </script>
 
 <div>
-	<Search />
+	<Search { search } />
 	<div>
 		{#each data.books as book}
-		<Book { book }/>
+		<Book { book } />
 		{/each}
 	</div>
 </div>
