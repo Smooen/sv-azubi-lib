@@ -6,6 +6,8 @@
 
 <!-- Top-Bar goes here -->
 
-{@render children()}
+<main class="container">
+	{@render children()}
+</main>
 
 <Footer />
