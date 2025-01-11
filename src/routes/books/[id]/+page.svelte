@@ -1,7 +1,8 @@
 <script lang="ts">
 	import BookDetails from './BookDetails.svelte';
 
-	let { data } = $props();
+	export let data;
+	const { book } = data;
 </script>
 
-<p>{data.book?.title}</p>
+<BookDetails { book } />

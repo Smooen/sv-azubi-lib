@@ -1,11 +1,28 @@
 <script lang="ts">
 	import placeholder from '$lib/assets/cover_placeholder.png';
+
+	let { book } = $props();
 </script>
 
 <div>
-	<img src="{placeholder}" alt="cover of book">
-	<p>Title</p>
-	<button>Rent</button>
-	<button>Fav</button>
-	<p>Available?</p>
+	<img src="{book.imageLink ? book.imageLink : placeholder}" alt="cover of book">
+	<p>{book.title}</p>
+
+	<div>
+		<button>Rent</button>
+		<button>Favorite</button>
+	</div>
+
+	<div class={book.availability ? "available" : "not-available"}>{book.availability ? 'Available' : 'Not available'}</div>
+
+	{JSON.stringify(book)}
 </div>
+
+<style>
+	.available {
+		color: green
+	}
+	.not-available {
+		color: red;
+	}
+</style>
