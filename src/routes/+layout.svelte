@@ -1,5 +1,5 @@
 <script>
-	import '@picocss/pico';
+	//import '@picocss/pico';
 	let { children } = $props();
 	import Header from './Header.svelte'
 </script>

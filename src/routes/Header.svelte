@@ -1,6 +1,10 @@
 <header>
     <nav>
+        <a href="/">Home</a>
+        <a href="/books">Books</a>
+        <a href="/favorites">Favorites</a>
         <a href="/login">Login</a>
+        <a href="/register">Register</a>
     </nav>
     <div>Logo?</div>
 </header>
@@ -10,10 +14,15 @@
         position: static;
         top: 0;
         width: 100%;
-        background-color: var(--pico-background-color);
+        background-color: lightblue;
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
     }
 
     nav a {
