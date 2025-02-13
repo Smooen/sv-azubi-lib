@@ -7,15 +7,13 @@
 
 <style>
     header {
-        position: sticky;
+        position: static;
         top: 0;
         width: 100%;
+        background-color: var(--pico-background-color);
         display: flex;
         justify-content: space-around;
-    }
-
-    nav {
-        background-color: var(--pico-background-color);
+        align-items: center;
     }
 
     nav a {
