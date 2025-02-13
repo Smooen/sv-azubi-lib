@@ -1,5 +1,5 @@
-<h1>Hello London innit bruv</h1>
+<h1>Navigate to the different sections:</h1>
 
-<nav>
-	<a href="/books">Books</a>
-</nav>
+<a href="/books">Books</a>
+<br>
+<a href="/login">Login</a>

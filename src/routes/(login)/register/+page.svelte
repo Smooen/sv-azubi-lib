@@ -1,1 +1,1 @@
-<H1>Register here innit</H1>
+<h1>Register here innit</h1>

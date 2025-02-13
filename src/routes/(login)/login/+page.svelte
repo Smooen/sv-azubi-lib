@@ -9,6 +9,6 @@
 
 	<button type="submit">Login</button>
 </form>
-<a href="/">Continue without logging in</a>
+<a href="/books">Continue without logging in</a>
 <p>or</p>
 <a href="/register">Register a new account</a>
