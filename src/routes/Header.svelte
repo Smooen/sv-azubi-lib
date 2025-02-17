@@ -14,7 +14,7 @@
         position: static;
         top: 0;
         width: 100%;
-        background-color: lightblue;
+        background-color: var(--pico-background-color);
         display: flex;
         justify-content: space-around;
         align-items: center;
