@@ -58,6 +58,8 @@ The neat thing about svelte (the framework for this project) is, that each page 
 There are always exceptions to the rule, of course.  
 Everything the `+layout.svelte` file contains is inherited by all subsequent pages, layouts and components. `Footer.svelte` is used in the `+layout.svelte` in `src\routes\(app)`, which means `src\routes\(app)\books` and `src\routes\(app)\favorites` will also contain the footer.
 
+If you want to add some CSS classes that apply to everything, you can do so in `src\lib\styles\main.css`.
+
 ## TODOs
 
 - Create a Login form (after Backend auth is done)
