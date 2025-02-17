@@ -1,11 +1,11 @@
 <h1>LOGIN</h1>
 
-<form action="POST">
+<form method="POST" action="/login">
 	<label for="email">E-Mail</label>
-	<input type="email" placeholder="E-Mail" id="email">
+	<input type="email" placeholder="E-Mail" name="email">
 
 	<label for="password">Password</label>
-	<input type="password" placeholder="Password" id="password">
+	<input type="password" placeholder="Password" name="password">
 
 	<button type="submit">Login</button>
 </form>
