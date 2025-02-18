@@ -6,15 +6,34 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 
 ### Prerequisites:
 
-- ([npm / Nodejs](https://nodejs.org/en/download)) -> Download and run the Windows Installer (or ask the Infra to get it for you).
+- [npm / Nodejs](https://nodejs.org/en/download) -> Download and run the Windows Installer (or ask the Infra to get it for you).
 
-- Verify the installation by opening a Command Prompt / Powershell / Terminal and typing `npm -v`. You should see something like `11.1.0` on the console.
+- Verify the installation by opening a Command Prompt / Powershell / Terminal and typing `npm -v`. You should see something like `11.1.0` or `10.9.0` on the console.
 
 - If you see this README you should already have the Project on your computer. If not, ask Simon or Jonathan to send it to you.
+
+Assuming you have the Project or the .zip file:
+
+- Create a folder on your `C:/` Drive, and call it `source`
+
+- Unpack the .zip file into your newly created folder
+
+- If this is your first time running the project you have to install the required node modules. Once inside `C:\source\sv-azubi-lib` you can:
+    - right click -> open terminal.
+    - or press Ctrl + L to jump into the adress bar in your file explorer and type `cmd` to open a command prompt in the current folder.
+
+- In the Terminal run `npm install` - this could take a bit, but you shouldn't see any errors here
+
+- After that, you can run the application from your Terminal with `npm run dev -- --open`. A new browser tab will open where you will see any changes you make.
+
+To actually edit anything you want to use VS Code. In the folder where you ran the `npm` commands before, you can type `code .` and hit enter to open VS Code here.  
+Alternatively you can right click in `C:\source\sv-azubi-lib` -> (Show more options) -> Open with Code
 
 ### How to run:
 
 At the project root (where this README is located), open your Command Prompt / Powershell / Terminal and use this to run the application and open a browser window automatically:
+
+
 
 ```bash
 npm run dev -- --open
