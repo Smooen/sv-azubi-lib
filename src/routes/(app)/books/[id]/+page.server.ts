@@ -1,10 +1,12 @@
-import { error } from '@sveltejs/kit';
-import { books } from '../testdata.js';
+export async function load({ params }) {
+    const bookId = params.id;
+    const response = await fetch(`http://localhost:1323/book?isbn=${bookId}`);
 
-export function load({ params }) {
-    const book = books.find((book) => book.isbn === params.id);
+    if (!response.ok) {
+        return { success: false, error: 'Something went wrong querying the book' }
+    }
 
-    if(!book) error(404);
+    const book = await response.json();
 
     return { book };
 }
