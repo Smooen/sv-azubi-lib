@@ -1,7 +1,7 @@
 import type { Actions } from "./$types";
 
 export const actions = {
-    default: async (event) => {
+    login: async (event) => {
         const data = await event.request.formData();
         const dataObj = Object.fromEntries(data);
         console.log(dataObj);
@@ -14,7 +14,7 @@ export const actions = {
         });
 
         if (!response.ok) {
-            return { success: false, error: 'Something went wrong logging you in' }
+            return { success: false, error: `${response.status}: ${response.statusText}` }
         }
 
         return { success: true };
