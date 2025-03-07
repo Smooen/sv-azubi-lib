@@ -1,8 +1,8 @@
 import type { Actions } from "./$types";
 
 export const actions = {
-    login: async (event) => {
-        const data = await event.request.formData();
+    login: async ({request, cookies}) => {
+        const data = await request.formData();
         const dataObj = Object.fromEntries(data);
         console.log(dataObj);
 
@@ -11,12 +11,18 @@ export const actions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(dataObj),
+            credentials: 'include'
         });
 
         if (!response.ok) {
             return { success: false, error: `${response.status}: ${response.statusText}` }
         }
 
+        const setCookieHeader = response.headers.get('set-cookie');
+        if (setCookieHeader) {
+            cookies.set('token', setCookieHeader,{ path: '/' });
+        }
+        
         return { success: true };
     }
 } satisfies Actions

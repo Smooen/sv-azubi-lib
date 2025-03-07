@@ -6,10 +6,10 @@
 
 <form method="POST" action="?/login">
 	<label for="email">E-Mail</label>
-	<input type="email" placeholder="E-Mail" name="email">
+	<input type="email" placeholder="E-Mail" name="email" id="email">
 
 	<label for="password">Password</label>
-	<input type="password" placeholder="Password" name="password">
+	<input type="password" placeholder="Password" name="password" id="password">
 
 	<button type="submit">Login</button>
 </form>
