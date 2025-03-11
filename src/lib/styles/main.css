@@ -1,11 +1,9 @@
 /* Global Styles go here */
 
 @font-face {
-    font-family: 'Helvetica';
-    src: url('/fonts/HelveticaNeueLTPro-LT.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueLTPro-Lt.otf');
+}
   
   html {
     font-family: 'Helvetica', sans-serif;

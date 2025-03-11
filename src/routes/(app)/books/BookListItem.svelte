@@ -1,6 +1,6 @@
 <script lang="ts">
 	import cover_placeholder from '$lib/assets/cover_placeholder.png';
-
+	import MdiBookHeartOutline from '~icons/mdi/book-heart-outline';
 	let { book } = $props();
 </script>
 
@@ -12,6 +12,7 @@
 		<p>Title: {book.title}</p>
 		<p>Author: {book.author}</p>
 		<p>Release Date: {book.releaseDate}</p>
+		<MdiBookHeartOutline class="icon" />
 	</div>
 </div>
 
